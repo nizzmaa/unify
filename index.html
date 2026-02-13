@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UNIFY - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <h1 class="brand">UNIFY</h1>
+    <p class="tagline">Campus Communication Platform</p>
+
+    <!-- LOGIN SECTION -->
+    <div id="loginSection">
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button class="primary-btn" onclick="login()">Login</button>
+      <p onclick="showSignup()" style="cursor:pointer;">
+        New user? Create Account
+      </p>
+    </div>
+
+    <!-- SIGNUP SECTION -->
+    <div id="signupSection" style="display:none;">
+      <input type="text" id="signupName" placeholder="Full Name">
+      <input type="text" id="signupCollege" placeholder="College">
+      <input type="text" id="signupDept" placeholder="Department">
+      <input type="email" id="signupEmail" placeholder="Email">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <button class="primary-btn" onclick="signup()">Create Account</button>
+      <p onclick="showLogin()" style="cursor:pointer;">
+        Already have an account? Login
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

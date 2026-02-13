@@ -1,0 +1,337 @@
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  background-image: url("../image 3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+
+/* ============================= */
+/* LOGIN PAGE */
+/* ============================= */
+
+.login-body {
+  background: linear-gradient(135deg, #1f2f3f, #4ca1af);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  background: white;
+  width: 380px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.brand {
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #2c3e50;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #1a252f;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #2c3e50;
+  color: #2c3e50;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* ============================= */
+/* SIDEBAR */
+/* ============================= */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: #2c3e50;
+  color: white;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.sidebar-item {
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.sidebar-item:hover {
+  background: #1f2f3f;
+  padding-left: 10px;
+}
+
+.sidebar-submenu {
+  display: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-submenu div {
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebar-submenu.show {
+  display: block;
+}
+
+
+/* ============================= */
+/* SIDEBAR COLLAB LIST */
+/* ============================= */
+
+.collab-list {
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.collab-item {
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: white;
+}
+
+.collab-item small {
+  opacity: 0.7;
+}
+
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* ============================= */
+/* PROFILE CARD */
+/* ============================= */
+
+.profile-card {
+  background: white;
+  width: fit-content;
+  margin: 20px auto 30px;
+  padding: 18px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile-meta {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.dot {
+  margin: 0 6px;
+  color: #bbb;
+}
+
+
+/* ============================= */
+/* DASHBOARD GRID */
+/* ============================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2c3e50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-dropdown {
+  display: none;
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.card-dropdown.show {
+  display: block;
+}
+
+
+/* ============================= */
+/* FORM ELEMENTS */
+/* ============================= */
+
+textarea,
+input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+#subjectBox {
+  display: none;
+}
+
+
+/* ============================= */
+/* CENTER MODAL */
+/* ============================= */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.modal-box button {
+  padding: 8px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-box button:hover {
+  background: #1f2f3f;
+}
+.collab-desc {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+#subjectBox {
+  display: none;
+}
+

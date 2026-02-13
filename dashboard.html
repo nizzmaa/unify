@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - UNIFY</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <h2>UNIFY</h2>
+
+    <div class="sidebar-item" onclick="showLibrary()">
+      📚 Common Library
+    </div>
+
+    <div class="sidebar-item" onclick="toggleColleges(event)">
+      🏫 Other Colleges ▾
+    </div>
+
+    <div id="collegeDropdown" class="sidebar-submenu">
+      <div>GECK</div>
+      <div>GECT</div>
+      <div>GECW</div>
+      <div>GCEK</div>
+    </div>
+
+    <div class="sidebar-item" onclick="logout()">
+      🚪 Logout
+    </div>
+
+    <hr style="margin:20px 0; opacity:0.3;">
+
+    <h4>Collaboration Requests</h4>
+    <div id="collabList" class="collab-list"></div>
+
+  </div>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    
+    <div class="dashboard-left">
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <span id="userInitial"></span>
+      </div>
+
+      <div class="profile-details">
+        <h3 id="userName"></h3>
+        <p class="profile-meta">
+          <span id="userCollege"></span>
+          <span class="dot">•</span>
+          <span id="userDept"></span>
+        </p>
+      </div>
+    </div>
+  
+    
+
+    <div class="message-box" id="libraryMessage"></div>
+
+    <div class="dashboard-grid">
+
+<!-- EVENTS -->
+<div class="card">
+  <button onclick="toggleDropdown('eventsMenu')">
+    Events ▼
+  </button>
+
+  <div id="eventsMenu" class="card-dropdown">
+
+    <button class="event-option" onclick="showArtEvent()">
+      🎨 Arts
+    </button>
+
+    <button class="event-option" onclick="showTechEvent()">
+      💻 Tech
+    </button>
+
+    <button class="event-option" onclick="showSportsEvent()">
+      🏆 Sports
+    </button>
+
+  </div>
+</div>
+
+      <!-- PEER GROUPS -->
+      <div class="card">
+        <button onclick="toggleDropdown('groupsMenu')">Peer Groups ▼</button>
+        <div id="groupsMenu" class="card-dropdown">
+          <div>Peer Group 1</div>
+          <div>Peer Group 2</div>
+        </div>
+      </div>
+
+      <!-- COLLABORATE -->
+      <div class="card">
+        <button onclick="toggleDropdown('collabMenu')">Collaborate ▼</button>
+        <div id="collabMenu" class="card-dropdown">
+
+          <input type="text" id="collabName" placeholder="Enter your name">
+          <input type="text" id="collabCollege" placeholder="Enter your college">
+          <textarea id="projectDesc" placeholder="Enter project description"></textarea>
+
+          <button onclick="sendCollab()">Submit</button>
+          <p id="collabMsg"></p>
+
+        </div>
+      </div>
+
+      <!-- TUTORING -->
+      <div class="card">
+        <button onclick="toggleDropdown('tutoringMenu')">Tutoring ▼</button>
+        <div id="tutoringMenu" class="card-dropdown">
+          <button onclick="setRole('Tutor')">Register as Tutor</button>
+          <button onclick="setRole('Tutee')">Register as Tutee</button>
+          <input type="text" id="subjectBox" placeholder="Enter subject">
+          <button onclick="registerTutor()">Submit</button>
+          <p id="tutorMsg"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- EVENT MODAL -->
+<div id="eventModal" class="modal-overlay">
+  <div class="modal-box">
+    <h3 id="modalTitle"></h3>
+    <p id="modalMessage"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script src="js/firebase.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
